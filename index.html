@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sir Ji Store</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Sir Ji Store 🛒</h1>
+    <div id="cart">Cart: <span id="cart-count">0</span></div>
+</header>
+
+<section id="search-bar">
+    <input type="text" id="search" placeholder="Search products...">
+</section>
+
+<!-- Product Grid -->
+<main id="product-list"></main>
+
+<!-- Product Detail + Checkout -->
+<section id="product-detail-section" class="hidden">
+    <div id="product-detail">
+        <div id="product-images">
+            <img id="img1" src="" alt="">
+            <img id="img2" src="" alt="">
+            <img id="img3" src="" alt="">
+        </div>
+        <h2 id="product-name"></h2>
+        <p id="product-price"></p>
+        <p id="product-desc"></p>
+
+        <label>Quantity: <input type="number" id="quantity" min="1" value="1"></label>
+        <button id="add-to-cart">Add to Cart</button>
+        <button id="buy-now">Buy Now</button>
+    </div>
+
+    <section id="checkout-steps" class="hidden">
+        <!-- Step 1: Order Summary -->
+        <div class="step" id="step1">
+            <h3>Step 1: Order Summary</h3>
+            <div id="order-items"></div>
+            <button id="to-step2">Next</button>
+        </div>
+
+        <!-- Step 2: Address -->
+        <div class="step hidden" id="step2">
+            <h3>Step 2: Enter Address</h3>
+            <form id="address-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="text" id="city" placeholder="City" required>
+                <button type="submit">Next</button>
+            </form>
+        </div>
+
+        <!-- Step 3: Payment -->
+        <div class="step hidden" id="step3">
+            <h3>Step 3: Payment</h3>
+            <p>Cash on Delivery</p>
+            <button id="complete-order">Confirm Order</button>
+        </div>
+
+        <!-- Done -->
+        <div class="step hidden" id="done">
+            <h3>✅ Order Placed Successfully!</h3>
+            <button id="back-to-home">Back to Home</button>
+        </div>
+    </section>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
